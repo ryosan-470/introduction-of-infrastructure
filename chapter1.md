@@ -53,6 +53,7 @@ RedHat社が手掛けるディストリビューション. 有償サポートが
 まずVirtualBoxを起動してNewというボタンを押します.すると以下のようになります.
 
 ![](img/01_VirtualBox_New.png)
+
 ここで `Type: Linux`, `Version: Ubuntu (64bit)` を選択して次に進みます.
 
 次はメモリの量を指定します.勿論メモリが大きい方がよいですがホストマシンのメモリを専有してしまうため,ホストマシンのメモリが4GB程度であれば1GB程度までを, 8GBくらいあるのなら2GBくらいにしてもよいでしょう.今回は1024MB(1GB)にしました.
@@ -62,7 +63,9 @@ RedHat社が手掛けるディストリビューション. 有償サポートが
 
 ![](img/01_VirtualBox_Top.png)
 ここまできたら次はUbuntuのISOディスクを設定します.
-[Settings] -> [Storage]に行き Controller: IDE の下にEmptyがあることを確認します.![](img/01_VirtualBox_Storage.png)
+[Settings] -> [Storage]に行き Controller: IDE の下にEmptyがあることを確認します.
+
+![](img/01_VirtualBox_Storage.png)
 
 右側にあるOptional Driveの更に右にあるディスクマークをクリックし, ISOファイルを選択します.
 
@@ -70,7 +73,9 @@ RedHat社が手掛けるディストリビューション. 有償サポートが
 こんな感じに. そしたらOKを押してTOP画面に戻り実際にサーバーを起動してみましょう.
 
 起動すると以下の様な感じになります.
+
 ![](img/01_Install_start.png)
+
 マウスなどが仮想マシンに取られてしまい, ホストマシンに戻したいときは今回の場合, 右下に書いてあるとおり**左Command**キーを押すことで戻ることができます.
 
 まずはじめにシステムの言語を設定します.個人的にはエラーメッセージなどが日本語で表示されるとあとあと困るという経験から(文字化けしてメッセージが読めないなど)英語にすることを勧めます.
@@ -88,6 +93,17 @@ RedHat社が手掛けるディストリビューション. 有償サポートが
 11. LVM: Guided - use entire disk and setup LVM
 12. Write the changes to disks and configure LVM?: Yes
 13. HTTP Proxy: 設定する必要ないので何も入力せずContinue
-14. 
+14. Software Selection: OpenSSH Serversにチェックを付ける
+15. Install the GRUB ~ : Yes
+
+最後にインストールが終わったからディスクを抜いてくれという意味が出てくるがガン無視してw普通にContinueします.
+
+これでいい感じにインストールすることができました.一度仮想マシンの電源を切って再起動してみましょう.
+
+![](img/01_Boot.png)
+
+こんな感じの画面が出てくるのでlogin名に登録したユーザー名, 次にパスワードを入力しエンターを押せば見慣れたBashの画面が起動します.
+
+
 
 
