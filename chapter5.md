@@ -251,3 +251,16 @@ $ sudo apt install php7.0-mysql
 ![](img/05_wordpress_top.png)
 
 ## (オプショナル) Rails製アプリをデプロイしてみる
+上記ではPHP製のCMSであるWordPressをインストールして利用できるようにしてみました.
+本章ではPHP以外のWebアプリとしてRails製のアプリであるRedmineをインストールしてみることにします.
+
+手順としては以下のようにすればインストールできます.
+
+1. Rubyをインストールする.
+2. 適当なRDBMSをインストールして, Redmine用のユーザーとテーブルを作成する
+3. [GitHub上のRedmineのリポジトリ](https://github.com/redmine/redmine/releases)から最新版のRedmineをダウンロードし展開
+4. Redmineの設定ファイルを開き,DB等の設定を行う.
+5. 頑張って3000番ポートなどで起動させる
+6. Nginxでリバースプロキシをして外部から80番でアクセスできるようにする
+
+この課題はオプショナルなので各自が適当に調べ動くようになるまで頑張ってみてください.
