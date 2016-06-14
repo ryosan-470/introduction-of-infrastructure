@@ -132,7 +132,7 @@ Codename:       trusty
 実演したようにここでWordpressのDockerコンテナをデプロイして実行してみましょう.
 
 ```bash
-$ docker run --name wordpress --link wordpress-mysql:mysql -d wordpress
+$ docker run --name wordpress-mysql -e MYSQL_ROOT_PASSWORD=password mysql:5.6
 7ed3b40cc734827f251f8ad66ac8676fb5444f429aa4ea3b5e222a7abf96cb67
 $ docker run -d --name wordpress --link wordpress-mysql:mysql -p 8080:80 wordpress
 b205f06d5d75b91834f626473d50d1038eadda350586eb4506ceee948a75be65
